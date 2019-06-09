@@ -1,0 +1,56 @@
+<html xmlns="http://thymeleaf.org">
+
+<head>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" type="text/css"></link>
+    <link th:href="@{/css/layout.css}" rel="stylesheet" type="text/css"></link>
+</head>
+
+<body>
+    <div class="container">
+        <form class="form-horizontal" action="/direction">
+            <fieldset>
+                            <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="submit"></label>
+                    <div class="col-md-4">
+                        <img  width="450" height="120" src="https://www.watsoneng.com/wp-content/uploads/2013/09/rapid_transit.jpg">
+                    </div>
+                </div>
+            
+
+                <!-- Form Name -->
+                <legend>.                UK Travel Simplifier Home</legend>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="username"></label>
+                    <div class="col-md-4">
+                        <input id="start" name="start" type="text" placeholder="start" class="form-control input-md" required="" />
+
+                    </div>
+                </div>
+
+                <!-- Password input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="password"></label>
+                    <div class="col-md-4">
+                        <input id="finish" name="finish" type="text" placeholder="finish" class="form-control input-md" required="" />
+
+                    </div>
+                </div>
+                                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="submit"></label>
+                    <div class="col-md-4">
+                        <button id="submit" name="submit" class="btn btn-primary btn-login">Login</button>
+                    </div>
+                </div>         
+            </fieldset>
+        </form>
+
+        <script type="text/javascript" th:src="@{/js/jquery-3.1.0.min.js}"></script>
+        <script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+    </div>
+</body>
+
+</html>
