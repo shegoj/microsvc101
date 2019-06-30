@@ -54,7 +54,7 @@ public class WebController {
 
             ObjectMapper objectMapper = new ObjectMapper();
             URL url = new URL("https://maps.googleapis.com/maps/api/directions/json?origin="+ start + "&destination=" +
-                    finish + "&key=" + api_key + mode +"&travel_mode=transit%22");
+                    finish + "&key=" + api_key +"&mode=" + mode  +"&travel_mode=transit%22");
             HashMap<String, Object> map = objectMapper.readValue(url, new TypeReference<Map<String, Object>>() {});
             Misc misc = new Misc();
             Commute commute = misc.getCommuteDetails(map);
