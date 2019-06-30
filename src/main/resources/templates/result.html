@@ -6,33 +6,47 @@
 </head>
 <body>
     <!--<p th:text="${result}" />-->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="submit"></label>
+        <div class="col-md-4">
+            <label class="col-md-4 control-label" for="username"><a href="/">HOME</a></label>
+        </div>
+    </div>
               <div class="form-group">
                     <label class="col-md-4 control-label" for="submit"></label>
                     <div class="col-md-4">
-                        <img  width="450" height="120" src="https://www.watsoneng.com/wp-content/uploads/2013/09/rapid_transit.jpg">
+                        <img  width="500" height="160" src="https://cdn.japantimes.2xx.jp/wp-content/uploads/2019/03/adelstein-20190301-z-870x492.png">
                     </div>
                 </div>
-          <table border = "1" cellpadding = "5" cellspacing = "5">
+          <table border = "1" cellpadding = "1" cellspacing = "1">
          <tr>
-            <th>Mode</th>
-            <th>Time taken</th>
-         </tr>
-         <tr>
-            <td><img src="https://www.sefiles.net/merchant/1685/images/site/rental-slimC.png?t=1524095545068" height="42" width="75"></td>
-            <td>50 minutes</td>
-         </tr>
-         <tr>
-            <td><img src="https://www.reviewjournal.com/wp-content/uploads/2018/11/11466464_web1_WEATHER_011217bl_027.jpg" height="42" width="75"></td>
-            <td>30 minutes</td>
-         </tr>
-         <tr>
-            <td>Driving </td>
-            <td>20 minutes</td>
-         </tr>
-         <tr>
-            <td>Walking </td>
-            <td>70 minutes</td>
-         </tr>
+             <td>Mode</td>
+             <td><img th:src="@{${mode}}" height="42" width="75"></td>
+         </tr><tr>
+             <td>Start Address</td>
+              <td><p th:text="${startaddress}" /> </td>
+          </tr>
+              <tr>
+             <td>End Address</td>
+                  <td><p th:text="${endaddress}" /> </td>
+              </tr><tr>
+             <td>Departure Time </td>
+              <td><p th:text="${departuretime}" /> </td>
+          </tr><tr>
+             <td>Arrival Time</td>
+              <td><p th:text="${arrivaltime}" /> </td>
+          </tr><tr>
+             <td>Duration</td>
+              <td><p th:text="${duration}" /> </td>
+          </tr><tr>
+             <td>Distance</td>
+              <td><p th:text="${distance}" /> </td>
+          </tr>
+
+              <!-- <tr>
+                  <td><img src="https://www.sefiles.net/merchant/1685/images/site/rental-slimC.png?t=1524095545068" height="42" width="75"></td>
+                  <td>50 minutes <p th:text="${start}" /> </td>
+               </tr>-->
       </table>
 </body>
 </html>
